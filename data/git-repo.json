@@ -6,5 +6,6 @@
     "lazydocker": "jesseduffield/lazydocker",
     "lazygit": "jesseduffield/lazygit",
     "msedit": "microsoft/edit",
-    "neovide": "neovide/neovide"
+    "neovide": "neovide/neovide",
+    "superfile": "yorukot/superfile"
 }
