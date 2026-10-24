@@ -7,10 +7,18 @@ on:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
+      - name: Set up Python Requests
+      # 为 Github Actions ubnuntu-slim 及 Gitea Runner ubuntu 镜像安装 requests 库
+        run: |
+            if ! python3 -c "import requests" >/dev/null 2>&1; then
+              echo "Python requests is not installed. Installing..."
+              pip3 install requests
+            fi
 
       - name: Run check script
         env:
