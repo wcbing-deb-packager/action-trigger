@@ -73,7 +73,7 @@ def trigger_workflow(repo: str, workflow: str, ref: str, tag: str) -> bool:
 
 
 def check_and_trigger(name: str, repo: str) -> None:
-    build_repo = f"wcbing-apt-repo/{name}-debs"
+    build_repo = f"wcbing-deb-packager/{name}-debs"
     # 检查目标 build 仓库是否存在
     if not repo_exists(build_repo):
         logging.error(f"Build repo not found: {build_repo}")
